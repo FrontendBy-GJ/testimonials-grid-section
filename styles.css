@@ -70,10 +70,9 @@ article:nth-child(5) {
       color: var(--White);
       opacity: 50%;
     }
-  }
-
-  .gray {
-    color: var(--Very-dark-grayish-blue) !important;
+    .gray {
+      color: var(--Very-dark-grayish-blue);
+    }
   }
 }
 
@@ -86,4 +85,8 @@ article:nth-child(5) {
 .summary {
   color: var(--Light-gray);
   opacity: 0.7;
+}
+
+.gray {
+  color: var(--Very-dark-grayish-blue);
 }
