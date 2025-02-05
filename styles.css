@@ -27,26 +27,47 @@ main {
   gap: 1rem;
 }
 
-article {
-  border-radius: 10px;
-  padding: 2rem;
-  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);
-  width: 320px;
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.rows-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-article:nth-child(1) {
-  background-color: var(--Moderate-violet);
+article {
+  border-radius: 10px;
+  padding: 32px;
+  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);
+  width: 327px;
 }
-article:nth-child(2) {
+
+.article-1 {
+  background-color: var(--Moderate-violet);
+  background-image: url('/images/bg-pattern-quotation.svg');
+  background-repeat: no-repeat;
+  background-position: 180px 0;
+
+  img {
+    border: 3px solid rgb(157, 110, 215);
+  }
+}
+.article-2 {
   background-color: var(--Very-dark-grayish-blue);
 }
-article:nth-child(3) {
+.article-3 {
   background-color: var(--White);
 }
-article:nth-child(4) {
+.article-4 {
   background-color: var(--Very-dark-blackish-blue);
+  img {
+    border: 3px solid rgb(157, 110, 215);
+  }
 }
-article:nth-child(5) {
+.article-5 {
   background-color: var(--White);
 }
 
@@ -58,7 +79,6 @@ article:nth-child(5) {
 
   img {
     border-radius: 50%;
-    border: 3px solid rgb(157, 110, 215);
   }
 
   .name {
@@ -79,7 +99,8 @@ article:nth-child(5) {
 .title {
   font-size: 20px;
   color: var(--White);
-  margin-block-end: 40px;
+  margin-block-end: 30px;
+  hyphens: auto;
 }
 
 .summary {
@@ -89,4 +110,36 @@ article:nth-child(5) {
 
 .gray {
   color: var(--Very-dark-grayish-blue);
+}
+
+@media (width > 1150px) {
+  body {
+    min-height: 100dvh;
+    display: grid;
+    place-content: center;
+  }
+  main {
+    grid-template-columns: 2fr 0.5fr;
+
+    article {
+      width: unset;
+    }
+
+    .row {
+      display: flex;
+      gap: 30px;
+      height: 282px;
+      /* width: 822px; */
+      flex-direction: row;
+    }
+    .rows-container {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      .row {
+        flex: 1;
+      }
+    }
+  }
 }
