@@ -253,3 +253,30 @@ article {
     grid-row: 1 / -1;
   }
 }
+
+footer {
+  margin-inline: auto;
+  text-align: center;
+  padding-block-start: 1rem;
+  font-size: 0.8rem;
+
+  p:first-of-type {
+    a {
+      color: var(--Very-dark-grayish-blue);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      transition: text-decoration 200ms ease allow-discrete;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  p:last-of-type {
+    a {
+      color: var(--Moderate-violet);
+    }
+    margin-block-start: 0.7rem;
+  }
+}
